@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Slurp {
 
 	class SLURP_API MouseMovedEvent : public Event

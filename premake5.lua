@@ -19,6 +19,9 @@ project "Slurp"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "pch.h"
+    pchsource "Slurp/src/pch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",
@@ -32,7 +35,7 @@ project "Slurp"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
+        cppdialect "C++20"
         staticruntime "On"
         systemversion "latest"
 
