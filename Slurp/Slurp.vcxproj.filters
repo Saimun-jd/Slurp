@@ -4,6 +4,9 @@
     <Filter Include="Slurp">
       <UniqueIdentifier>{BB2B1A0E-2740-42BF-F0C1-E51E5C953EF0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Slurp\Events">
+      <UniqueIdentifier>{3FF7275B-2B5A-B7FF-D4DF-EFB5C0218382}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Slurp.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Slurp\EntryPoint.h">
       <Filter>Slurp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slurp\Events\ApplicationEvent.h">
+      <Filter>Slurp\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slurp\Events\Event.h">
+      <Filter>Slurp\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slurp\Events\KeyEvent.h">
+      <Filter>Slurp\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slurp\Events\MouseEvent.h">
+      <Filter>Slurp\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Slurp\Log.h">
       <Filter>Slurp</Filter>

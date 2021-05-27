@@ -7,5 +7,7 @@
 		#define SLURP_API __declspec(dllimport)
 	#endif
 #else
-	#error Slurp only supports windows
+	#error Slurp only supports Windows!
 #endif
+
+#define BIT(x) (1 << x)

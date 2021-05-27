@@ -2,6 +2,7 @@
 #include<memory>
 #include "Core.h"
 #include<spdlog/spdlog.h>
+#include "spdlog/fmt/ostr.h"
 
 namespace Slurp
 {
@@ -13,7 +14,7 @@ namespace Slurp
 
 		inline static std::shared_ptr<spdlog::logger>& getCoreLogger() { return coreLogger; }
 
-		inline static std::shared_ptr<spdlog::logger>& getCliantLogger() { return cliantLogger; }
+		inline static std::shared_ptr<spdlog::logger>& getClientLogger() { return cliantLogger; }
 
 	private:
 		static std::shared_ptr<spdlog::logger> cliantLogger;
@@ -32,9 +33,10 @@ namespace Slurp
 
 
 //---------------Cliant Log macros---------------
-#define SL_CLIANT_TRACE(...)	::Slurp::Log::getCliantLogger()->trace(__VA_ARGS__)
-#define SL_CLIANT_WARN(...)		::Slurp::Log::getCliantLogger()->warn(__VA_ARGS__)
-#define SL_CLIANT_INFO(...)		::Slurp::Log::getCliantLogger()->info(__VA_ARGS__)
-#define SL_CLIANT_ERROR(...)	::Slurp::Log::getCliantLogger()->error(__VA_ARGS__)
-#define SL_CLIANT_FATAL(...)	::Slurp::Log::getCliantLogger()->fatal(__VA_ARGS__)
+// Client log macros
+#define SL_TRACE(...)	      ::Slurp::Log::getClientLogger()->trace(__VA_ARGS__)
+#define SL_INFO(...)	      ::Slurp::Log::getClientLogger()->info(__VA_ARGS__)
+#define SL_WARN(...)	      ::Slurp::Log::getClientLogger()->warn(__VA_ARGS__)
+#define SL_ERROR(...)	      ::Slurp::Log::getClientLogger()->error(__VA_ARGS__)
+#define SL_FATAL(...)	      ::Slurp::Log::getClientLogger()->fatal(__VA_ARGS__)
 //----------------------------------------
