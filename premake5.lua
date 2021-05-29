@@ -10,11 +10,18 @@ workspace "Slurp"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- include directories relative to rool path
+IncludeDir = {}
+IncludeDir["GLFW"] = "Slurp/vendor/GLFW/include"
+
+include "Slurp/vendor/GLFW"
+
 
 project "Slurp"
     location "Slurp"
     kind "SharedLib"
     language "C++"
+    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -31,12 +38,19 @@ project "Slurp"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/src/Slurp/Platfrom/Windows",
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
         cppdialect "C++20"
-        staticruntime "On"
         systemversion "latest"
 
         defines
@@ -52,20 +66,24 @@ project "Slurp"
 
     filter "configurations:Debug"
         defines "SL_DEBUG"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "SL_RELEASE"
+        runtime "Release"
         symbols "On"
 
     filter "configurations:Dist"
         defines "SL_DIST"
+        runtime "Release"
         symbols "On"
 
 project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
+    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -88,8 +106,7 @@ project "Sandbox"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
-        staticruntime "On"
+        cppdialect "C++20"
         systemversion "latest"
 
         defines
@@ -99,14 +116,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "SL_DEBUG"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "SL_RELEASE"
+        runtime "Release"
         symbols "On"
 
     filter "configurations:Dist"
         defines "SL_DIST"
+        runtime "Release"
         symbols "On"
-
-

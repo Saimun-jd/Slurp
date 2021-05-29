@@ -9,7 +9,6 @@ int main(int argc, char** argv)
 	Slurp::Log::Init();
 
 	SL_CORE_TRACE("Core succefully created");
-	SL_INFO("Hello APP initialized");
 
 	auto app = Slurp::CreateApplication();
 	app->Run();

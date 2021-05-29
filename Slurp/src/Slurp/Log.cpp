@@ -1,9 +1,7 @@
 #include "pch.h"
-#include "Log.h"
 #include<spdlog/sinks/stdout_color_sinks.h>
 
 namespace Slurp {
-
 
 	std::shared_ptr<spdlog::logger> Log::cliantLogger;
 	std::shared_ptr<spdlog::logger> Log::coreLogger;

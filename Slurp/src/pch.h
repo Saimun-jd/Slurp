@@ -11,10 +11,14 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
+#include <queue>
+#include <utility>
 #include <cmath>
 #include <random>
 #include <ranges>
 #include <iterator>
+
+#include "Slurp/Log.h"
 
 #ifdef SL_PLATFORM_WINDOWS
 	// target Windows 7 or later

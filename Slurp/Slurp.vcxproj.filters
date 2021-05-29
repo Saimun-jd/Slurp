@@ -7,6 +7,12 @@
     <Filter Include="Slurp\Events">
       <UniqueIdentifier>{3FF7275B-2B5A-B7FF-D4DF-EFB5C0218382}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Slurp\Platform">
+      <UniqueIdentifier>{6FCA20E1-5B98-14E7-442C-850D3099F04B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Slurp\Platform\Windows">
+      <UniqueIdentifier>{A9734D3A-956D-768C-7EDA-0C9D6A73DCF8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Slurp.h" />
@@ -31,7 +37,22 @@
     <ClInclude Include="src\Slurp\Events\MouseEvent.h">
       <Filter>Slurp\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Slurp\Input.h">
+      <Filter>Slurp</Filter>
+    </ClInclude>
     <ClInclude Include="src\Slurp\Log.h">
+      <Filter>Slurp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slurp\Platform\Windows\Window.h">
+      <Filter>Slurp\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slurp\Platform\Windows\WindowsInput.h">
+      <Filter>Slurp\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slurp\Platform\Windows\WindowsWindow.h">
+      <Filter>Slurp\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slurp\Window.h">
       <Filter>Slurp</Filter>
     </ClInclude>
     <ClInclude Include="src\pch.h" />
@@ -42,6 +63,12 @@
     </ClCompile>
     <ClCompile Include="src\Slurp\Log.cpp">
       <Filter>Slurp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Slurp\Platform\Windows\WindowsInput.cpp">
+      <Filter>Slurp\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Slurp\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Slurp\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pch.cpp" />
   </ItemGroup>
