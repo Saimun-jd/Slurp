@@ -2,6 +2,8 @@
 
 #include "Slurp/Application.h"
 
+#include "Slurp/Layer.h"
+
 //Logger class
 #include "Slurp/Log.h"
 

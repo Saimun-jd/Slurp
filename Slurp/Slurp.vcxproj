@@ -151,6 +151,8 @@
     <ClInclude Include="src\Slurp\Events\MouseEvent.h" />
     <ClInclude Include="src\Slurp\Input.h" />
     <ClInclude Include="src\Slurp\KeyCodes.h" />
+    <ClInclude Include="src\Slurp\Layer.h" />
+    <ClInclude Include="src\Slurp\LayerStack.h" />
     <ClInclude Include="src\Slurp\Log.h" />
     <ClInclude Include="src\Slurp\MouseButtonCodes.h" />
     <ClInclude Include="src\Slurp\Platform\Windows\Window.h" />
@@ -161,6 +163,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Slurp\Application.cpp" />
+    <ClCompile Include="src\Slurp\Layer.cpp" />
+    <ClCompile Include="src\Slurp\LayerStack.cpp" />
     <ClCompile Include="src\Slurp\Log.cpp" />
     <ClCompile Include="src\Slurp\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Slurp\Platform\Windows\WindowsWindow.cpp" />

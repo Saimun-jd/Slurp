@@ -62,6 +62,8 @@
     <ClInclude Include="src\Slurp\MouseButtonCodes.h">
       <Filter>Slurp</Filter>
     </ClInclude>
+    <ClInclude Include="src\Slurp\Layer.h" />
+    <ClInclude Include="src\Slurp\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Slurp\Application.cpp">
@@ -77,5 +79,7 @@
       <Filter>Slurp\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="src\Slurp\Layer.cpp" />
+    <ClCompile Include="src\Slurp\LayerStack.cpp" />
   </ItemGroup>
 </Project>
