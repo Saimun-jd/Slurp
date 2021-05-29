@@ -150,7 +150,9 @@
     <ClInclude Include="src\Slurp\Events\KeyEvent.h" />
     <ClInclude Include="src\Slurp\Events\MouseEvent.h" />
     <ClInclude Include="src\Slurp\Input.h" />
+    <ClInclude Include="src\Slurp\KeyCodes.h" />
     <ClInclude Include="src\Slurp\Log.h" />
+    <ClInclude Include="src\Slurp\MouseButtonCodes.h" />
     <ClInclude Include="src\Slurp\Platform\Windows\Window.h" />
     <ClInclude Include="src\Slurp\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Slurp\Platform\Windows\WindowsWindow.h" />

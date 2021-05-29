@@ -56,6 +56,12 @@
       <Filter>Slurp</Filter>
     </ClInclude>
     <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\Slurp\KeyCodes.h">
+      <Filter>Slurp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slurp\MouseButtonCodes.h">
+      <Filter>Slurp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Slurp\Application.cpp">
